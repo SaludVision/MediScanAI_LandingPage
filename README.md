@@ -1,0 +1,2 @@
+# MediScanAI_LandingPage
+MediScanAI LandingPage repository
