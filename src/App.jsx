@@ -77,7 +77,7 @@ const App = () => {
             <div className="flex items-center">
               <div className="flex items-center space-x-2">
                 <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                  <img src="../img/MediScanIA.png" alt="" />
+                  <img src="src/img/MediScanIA.png" alt="Logo MediScanAI"/>
                 </div>
                 <span className="text-xl font-bold text-secondary font-dmsans">MediScanAI</span>
               </div>
