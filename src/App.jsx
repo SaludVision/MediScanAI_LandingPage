@@ -21,7 +21,7 @@ const App = () => {
 
   const team = [
     { name: 'Renato German Reyes Valenzuela', role: 'Backend & ML Engineer', image: 'src/img/renato-profile.jpeg' },
-    { name: 'Jose Adrian Luza Carhuamaca', role: 'Full Stack Developer', image: 'src/img/foto-joseluza.jpg' },
+    { name: 'Jose Adrian Luza Carhuamaca', role: 'Full Stack Developer', image: 'src/img/foto_joseluza.jpg' },
     { name: 'Aaron Alejandro Cruz Ticona', role: 'Frontend Developer', image: 'src/img/foto-carnet-aaron.jpg' },
     { name: 'Luis Angel Anampa Lavado', role: 'DevOps Engineer', image: 'src/img/angel-profile.jpeg' },
     { name: 'Alessandro Alonso David Polanco', role: 'Software Architect', image: 'src/img/alessandro-profile.jpeg' }
