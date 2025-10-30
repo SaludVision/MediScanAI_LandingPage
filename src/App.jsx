@@ -94,7 +94,7 @@ const App = () => {
                   {item.name}
                 </a>
               ))}
-              <button className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition-all duration-200">
+              <button className="bg-[#10BEAE] text-white px-6 py-2 rounded-lg hover:bg-[#0da89a] transition-all duration-200 shadow-md">
                 Iniciar Sesión
               </button>
             </div>
@@ -125,7 +125,7 @@ const App = () => {
                   {item.name}
                 </a>
               ))}
-              <button className="w-full bg-primary text-white px-6 py-2 rounded-lg hover:bg-opacity-90 mt-2">
+              <button className="w-full bg-[#10BEAE] text-white px-6 py-2 rounded-lg hover:bg-[#0da89a] transition-all duration-200 shadow-md mt-2">
                 Iniciar Sesión
               </button>
             </div>
@@ -145,10 +145,10 @@ const App = () => {
                 MediScanAI transforma el análisis de imágenes médicas con resultados precisos en cuestión de minutos. Ahorra tiempo en diagnósticos y mejora la toma de decisiones con inteligencia artificial diseñada para profesionales de la salud.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-white text-secondary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200">
+                <button className="bg-white text-[#081828] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200 shadow-lg">
                   Comenzar Ahora
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-secondary transition-all duration-200">
+                <button className="border-2 border-white bg-transparent text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#081828] transition-all duration-200 shadow-lg">
                   Ver Demo
                 </button>
               </div>
@@ -288,16 +288,20 @@ const App = () => {
                 >
                   <span className="font-semibold text-gray-800">{faq.question}</span>
                   <ChevronDown
-                    className={`w-5 h-5 text-primary transition-transform duration-200 ${
+                    className={`w-5 h-5 text-[#10BEAE] transition-transform duration-300 ease-in-out ${
                       openFaq === index ? 'transform rotate-180' : ''
                     }`}
                   />
                 </button>
-                {openFaq === index && (
+                <div 
+                  className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                    openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                >
                   <div className="px-6 py-4 bg-gray-50 border-t">
                     <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
                   </div>
-                )}
+                </div>
               </div>
             ))}
           </div>
@@ -383,7 +387,7 @@ const App = () => {
 
               <button
                 type="submit"
-                className="w-full bg-primary text-white py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-200 flex items-center justify-center space-x-2"
+                className="w-full bg-[#10BEAE] text-white py-4 rounded-lg font-semibold hover:bg-[#0da89a] transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg"
               >
                 <Send size={20} />
                 <span>Enviar</span>
