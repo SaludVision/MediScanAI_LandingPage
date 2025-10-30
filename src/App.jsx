@@ -20,11 +20,11 @@ const App = () => {
   ];
 
   const team = [
-    { name: 'Renato German Reyes Valenzuela', role: 'Backend & ML Engineer' },
-    { name: 'Jose Adrian Luza Carhuamaca', role: 'Full Stack Developer' },
-    { name: 'Aaron Alejandro Cruz Ticona', role: 'Frontend Developer' },
-    { name: 'Luis Angel Anampa Lavado', role: 'DevOps Engineer' },
-    { name: 'Alessandro Alonso David Polanco', role: 'Software Architect' }
+    { name: 'Renato German Reyes Valenzuela', role: 'Backend & ML Engineer', image: 'src/img/renato-profile.jpeg' },
+    { name: 'Jose Adrian Luza Carhuamaca', role: 'Full Stack Developer', image: 'src/img/foto-joseluza.jpg' },
+    { name: 'Aaron Alejandro Cruz Ticona', role: 'Frontend Developer', image: 'src/img/foto-carnet-aaron.jpg' },
+    { name: 'Luis Angel Anampa Lavado', role: 'DevOps Engineer', image: 'src/img/angel-profile.jpeg' },
+    { name: 'Alessandro Alonso David Polanco', role: 'Software Architect', image: 'src/img/alessandro-profile.jpeg' }
   ];
 
   const features = [
@@ -69,15 +69,15 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white font-inter">
+    <div className="min-h-screen bg-linear-to-br from-gray-50 via-white to-gray-100 font-inter">
       {/* Navigation */}
-      <nav className="fixed w-full bg-white shadow-md z-50">
+      <nav className="fixed w-full bg-white/95 backdrop-blur-sm shadow-md z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <div className="flex items-center space-x-2">
                 <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">M</span>
+                  <img src="../img/MediScanIA.png" alt="" />
                 </div>
                 <span className="text-xl font-bold text-secondary font-dmsans">MediScanAI</span>
               </div>
@@ -134,7 +134,7 @@ const App = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-24 pb-16 bg-secondary">
+      <section id="home" className="pt-24 pb-16 bg-linear-to-br from-secondary via-blue-900 to-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-white">
@@ -154,7 +154,7 @@ const App = () => {
               </div>
             </div>
             <div className="hidden md:block">
-              <div className="bg-gradient-to-br from-primary to-blue-600 rounded-2xl p-8 shadow-2xl">
+              <div className="bg-linear-to-br from-primary/90 to-blue-600 rounded-2xl p-8 shadow-2xl">
                 <div className="aspect-video bg-white/10 rounded-lg backdrop-blur-sm flex items-center justify-center">
                   <div className="text-white text-center">
                     <div className="text-6xl mb-4">🏥</div>
@@ -168,7 +168,7 @@ const App = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-gray-50">
+      <section id="about" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-secondary mb-4 font-dmsans">Sobre Nosotros</h2>
@@ -197,24 +197,30 @@ const App = () => {
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              {team.map((member, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-24 h-24 bg-gradient-to-br from-primary to-blue-600 rounded-full mx-auto mb-3 flex items-center justify-center">
-                    <span className="text-white text-2xl font-bold">
-                      {member.name.split(' ')[0][0]}{member.name.split(' ')[1][0]}
-                    </span>
+              {team.map((member, index) => {
+                const parts = member.name.split(' ').filter(Boolean);
+                const displayName = parts.slice(0, 1).join(' ');
+                return (
+                  <div key={index} className="text-center bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <div className="w-20 h-20 bg-linear-to-br from-primary to-blue-600 rounded-full mx-auto mb-3 flex items-center justify-center shadow-lg overflow-hidden">
+                      <img 
+                        src={member.image} 
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-sm font-semibold text-gray-800">{displayName}</p>
+                    <p className="text-xs text-gray-600 mt-1">{member.role}</p>
                   </div>
-                  <p className="text-sm font-semibold text-gray-800">{member.name.split(' ')[0]}</p>
-                  <p className="text-xs text-gray-600">{member.role}</p>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
       </section>
 
       {/* Product Section */}
-      <section id="product" className="py-20 bg-white">
+      <section id="product" className="py-20 bg-linear-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-secondary mb-4 font-dmsans">Nuestro Producto - MediScanAI</h2>
@@ -232,16 +238,16 @@ const App = () => {
               <ul className="space-y-3">
                 {features.map((feature, index) => (
                   <li key={index} className="flex items-start">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 shrink-0"></div>
                     <span className="text-gray-700">{feature}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl p-8 shadow-xl">
+            <div className="bg-linear-to-br from-gray-100 to-gray-200 rounded-2xl p-8 shadow-xl">
               <div className="bg-white rounded-lg p-6 shadow-md">
-                <div className="aspect-square bg-gradient-to-br from-red-500 via-yellow-500 to-green-500 rounded-full mb-4 flex items-center justify-center relative overflow-hidden">
+                <div className="aspect-square bg-linear-to-br from-red-500 via-yellow-500 to-green-500 rounded-full mb-4 flex items-center justify-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-black/20"></div>
                   <span className="text-white text-4xl font-bold relative z-10">IA</span>
                 </div>
@@ -266,7 +272,7 @@ const App = () => {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-20 bg-gray-50">
+      <section id="faq" className="py-20 bg-linear-to-br from-gray-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-secondary mb-4 font-dmsans">Preguntas Frecuentes</h2>
@@ -299,7 +305,7 @@ const App = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white">
+      <section id="contact" className="py-20 bg-linear-to-br from-gray-50 to-blue-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-secondary mb-4 font-dmsans">Contáctanos</h2>
@@ -403,7 +409,7 @@ const App = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-secondary text-white py-8">
+      <footer className="bg-linear-to-br from-secondary to-blue-900 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
