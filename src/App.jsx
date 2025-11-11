@@ -20,7 +20,7 @@ const App = () => {
   ];
 
   const team = [
-    { name: 'Renato German Reyes Valenzuela', role: 'Backend & ML Engineer', image: 'src/img/renato-profile.jpeg' },
+    { name: 'Renato German Reyes Valenzuela', role: 'Backend & ML Engineer', image: 'src/img/renato-profile.png' },
     { name: 'Jose Adrian Luza Carhuamaca', role: 'Full Stack Developer', image: 'src/img/foto_joseluza.jpg' },
     { name: 'Aaron Alejandro Cruz Ticona', role: 'Frontend Developer', image: 'src/img/foto-carnet-aaron.jpg' },
     { name: 'Luis Angel Anampa Lavado', role: 'DevOps Engineer', image: 'src/img/angel-profile.jpeg' },
@@ -28,10 +28,10 @@ const App = () => {
   ];
 
   const features = [
-    'Análisis automatizado con modelos de IA entrenados en imágenes clínicas',
-    'Resultados rápidos con métricas de confianza y visualizaciones Grad-CAM',
-    'Integración segura con sistemas hospitalarios y plataformas en la nube',
-    'Reducción del tiempo promedio de diagnóstico en más del 40%'
+    '- Análisis automatizado con modelos de IA entrenados en imágenes clínicas',
+    '- Resultados rápidos con métricas de confianza y visualizaciones Grad-CAM',
+    '- Integración segura con sistemas hospitalarios y plataformas en la nube',
+    '- Reducción del tiempo promedio de diagnóstico en más del 40%'
   ];
 
   const faqs = [
