@@ -154,20 +154,12 @@ const App = () => {
               </div>
             </div>
             <div className="hidden md:block">
-              <div className="bg-linear-to-br from-primary/90 to-blue-600 rounded-2xl p-8 shadow-2xl">
-                <div className="aspect-video bg-white/10 rounded-lg backdrop-blur-sm flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <div className="text-6xl mb-4">🏥</div>
-                    <p className="text-xl font-semibold">IA Médica Avanzada</p>
-                  </div>
-                </div>
-              </div>
+                <img src="../src/img/doctor-looking.png" alt="" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
       <section id="about" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -219,7 +211,6 @@ const App = () => {
         </div>
       </section>
 
-      {/* Product Section */}
       <section id="product" className="py-20 bg-linear-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -245,28 +236,7 @@ const App = () => {
               </ul>
             </div>
 
-            <div className="bg-linear-to-br from-gray-100 to-gray-200 rounded-2xl p-8 shadow-xl">
-              <div className="bg-white rounded-lg p-6 shadow-md">
-                <div className="aspect-square bg-linear-to-br from-red-500 via-yellow-500 to-green-500 rounded-full mb-4 flex items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-black/20"></div>
-                  <span className="text-white text-4xl font-bold relative z-10">IA</span>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-600">Precisión</span>
-                    <span className="font-semibold text-primary">94.2%</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-600">Confianza</span>
-                    <span className="font-semibold text-primary">Alta</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-600">Tiempo</span>
-                    <span className="font-semibold text-primary">&lt; 3 min</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <img src="/src/img/results-ai.png" alt="" />
           </div>
         </div>
       </section>
