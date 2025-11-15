@@ -20,11 +20,11 @@ const App = () => {
   ];
 
   const team = [
-    { name: 'Renato German Reyes Valenzuela', role: 'Backend & ML Engineer', image: 'src/img/renato-profile.png' },
-    { name: 'Jose Adrian Luza Carhuamaca', role: 'Full Stack Developer', image: 'src/img/foto_joseluza.jpg' },
-    { name: 'Aaron Alejandro Cruz Ticona', role: 'Frontend Developer', image: 'src/img/foto-carnet-aaron.jpg' },
-    { name: 'Luis Angel Anampa Lavado', role: 'DevOps Engineer', image: 'src/img/angel-profile.jpeg' },
-    { name: 'Alessandro Alonso David Polanco', role: 'Software Architect', image: 'src/img/alessandro-profile.jpeg' }
+    { name: 'Renato German Reyes Valenzuela', role: 'Backend & ML Engineer', image: '/img/renato-profile.png' },
+    { name: 'Jose Adrian Luza Carhuamaca', role: 'Full Stack Developer', image: '/img/foto_joseluza.jpg' },
+    { name: 'Aaron Alejandro Cruz Ticona', role: 'Frontend Developer', image: '/img/foto-carnet-aaron.jpg' },
+    { name: 'Luis Angel Anampa Lavado', role: 'DevOps Engineer', image: '/img/angel-profile.jpeg' },
+    { name: 'Alessandro Alonso David Polanco', role: 'Software Architect', image: '/img/alessandro-profile.jpeg' }
   ];
 
   const features = [
@@ -77,7 +77,7 @@ const App = () => {
             <div className="flex items-center">
               <div className="flex items-center space-x-2">
                 <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                  <img src="src/img/MediScanIA.png" alt="Logo MediScanAI"/>
+                  <img src="/img/MediScanIA.png" alt="Logo MediScanAI"/>
                 </div>
                 <span className="text-xl font-bold text-secondary font-dmsans">MediScanAI</span>
               </div>
@@ -154,7 +154,7 @@ const App = () => {
               </div>
             </div>
             <div className="hidden md:block">
-                <img src="../src/img/doctor-looking.png" alt="" />
+                <img src="/img/doctor-looking.png" alt="" />
             </div>
           </div>
         </div>
@@ -236,7 +236,7 @@ const App = () => {
               </ul>
             </div>
 
-            <img src="/src/img/results-ai.png" alt="" />
+            <img src="/img/results-ai.png" alt="" />
           </div>
         </div>
       </section>
